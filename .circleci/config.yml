@@ -15,9 +15,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+          name: "compile"
           command: make
+      - run:
+          name: "run tidb"
           command: ./tibd-server
 
 # Invoke jobs via workflows
