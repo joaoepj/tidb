@@ -24,15 +24,15 @@ jobs:
             echo "my artifact file" > /tmp/artifact-1;
             mkdir /tmp/artifacts;
             echo "my artifact files in a dir" > /tmp/artifacts/artifact-2;
-            cp ./tidb-server /tmp/artifacts;
+            cp ./bin/tidb-server /tmp/artifacts;
       - store_artifacts:
           path: /tmp/artifact-1
           destination: artifact-file
       - store_artifacts:
           path: /tmp/artifacts
-      - run:
-          name: "run tidb"
-          command: ./tidb-server
+#      - run:
+#          name: "run tidb"
+#          command: ./tidb-server
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
