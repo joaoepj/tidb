@@ -19,7 +19,9 @@ jobs:
           command: make
       - run:
           name: "run tidb"
-          command: ls -l
+          command: ./tidb-server
+      - store_artifacts:
+        path: ./tidb-server
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
