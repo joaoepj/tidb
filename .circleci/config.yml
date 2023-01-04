@@ -32,7 +32,7 @@ jobs:
           path: /tmp/artifacts
       - run:
           name: "run tidb"
-          command: ./tidb-server
+          command: ./bin/tidb-server
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
